@@ -12,8 +12,9 @@ echo "🔹 Fonts: JetBrains Mono Nerd Font"
 echo "🔹 Drivers & Desktop: Mesa Drivers, COSMIC Desktop, Fastfetch"
 echo "🔹 Browsers & Terminal: Chrome, Brave, Warp Terminal"
 echo "🔹 DevOps: Docker (No-Sudo), kubectl, k9s, kubefwd"
-echo "🔹 Development: IntelliJ IDEA, VS Code, SDKMAN!, Micro Editor"
+echo "🔹 Development: IntelliJ IDEA, VS Code, SDKMAN!, Micro Editor, Postman"
 echo "🔹 Workarounds: Night Light (drm-colortemp)"
+echo "🔹 Other: BTop, VLC"
 echo "------------------------------------------------------------"
 
 # --- 1. System Updates & Basic Configuration ---
@@ -101,6 +102,9 @@ curl -s "https://get.sdkman.io" | bash
 echo "📝 Installing Snaps and configuring Docker..."
 sudo snap install intellij-idea --classic
 sudo snap install code --classic
+sudo snap install postman
+sudo snap install btop
+sudo snap install vlc
 
 if ! getent group docker > /dev/null; then
     sudo groupadd docker
