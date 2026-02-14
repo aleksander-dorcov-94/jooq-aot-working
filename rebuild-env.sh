@@ -12,14 +12,29 @@ echo "🔹 Fonts: JetBrains Mono Nerd Font"
 echo "🔹 Drivers & Desktop: Mesa Drivers, COSMIC Desktop, Fastfetch"
 echo "🔹 Browsers & Terminal: Chrome, Brave, Warp Terminal"
 echo "🔹 DevOps: Docker (No-Sudo), kubectl, k9s, kubefwd"
-echo "🔹 Development: IntelliJ IDEA, VS Code, SDKMAN!, Micro Editor, Postman"
+echo "🔹 Development: IntelliJ IDEA, VS Code, SDKMAN!, Micro Editor, Postman, Git, Curl"
 echo "🔹 Workarounds: Night Light (drm-colortemp)"
 echo "🔹 Other: BTop, VLC"
 echo "------------------------------------------------------------"
 
 # --- 1. System Updates & Basic Configuration ---
-echo "🔧 Updating system and fixing dual-boot clock..."
+echo "🔧 Updating system and fixing boot/time settings..."
 sudo apt update && sudo apt upgrade -y
+
+# GRUB (Boot Menu) Optimization
+echo "⏳ Shortening boot menu timeout to 1 second..."
+sudo sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=1/' /etc/default/grub
+sudo sed -i 's/^GRUB_TIMEOUT_STYLE=.*/GRUB_TIMEOUT_STYLE=menu/' /etc/default/grub
+
+# Fix for Ubuntu's hidden 30s timeout on failed boot/dual-boot
+if ! grep -q "GRUB_RECORDFAIL_TIMEOUT" /etc/default/grub; then
+    echo "GRUB_RECORDFAIL_TIMEOUT=1" | sudo tee -a /etc/default/grub
+else
+    sudo sed -i 's/^GRUB_RECORDFAIL_TIMEOUT=.*/GRUB_RECORDFAIL_TIMEOUT=1/' /etc/default/grub
+fi
+sudo update-grub
+
+# Dual-boot clock fix and core packages
 timedatectl set-local-rtc 1 --adjust-system-clock
 sudo apt install -y ubuntu-restricted-extras curl wget gpg zip unzip git fontconfig
 
