@@ -1,0 +1,103 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% --- GEOMETRY ---
+% Significantly reduced margins to 1.5cm on all sides for a cleaner, wider look
+\usepackage[scale=0.85, top=0.5cm, bottom=1cm, left=0.5cm, right=0.5cm]{geometry}
+
+% --- PACKAGES ---
+\usepackage{enumitem} % Used to control list spacing precisely
+
+% ModernCV styles: 'classic' is clean and professional
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+% Personal Data
+\name{Aleksander Z.}{Dorcov}
+\title{Senior Java Software Engineer}
+\address{Sofia, Bulgaria}{}
+\phone[mobile]{+359 877933794}
+\email{aleksander.dorcov@gmail.com}
+
+\begin{document}
+    \makecvtitle
+
+    \section{Professional Experience}
+
+% --- JOB 1 ---
+    \cventry{Apr 2025 -- Present}{Senior Java Developer}{Pollard Digital Solutions (contract)}{Casino}{}
+    {
+        Worked on casino integrations with different casino providers like IPM, Pragmatic etc.\\[0.2em]
+    \small\textbf{Stack:} Java 21, Spring Boot, PostgreSQL, Redis, RabbitMQ, REST, K8s, Docker
+    \vspace{5pt}
+        \begin{itemize}[nosep, leftmargin=1.5em]
+    \item Subscription
+    \item PayPal integration
+    \item Belgium
+        \end{itemize}
+    }
+
+% --- JOB 2 ---
+    \cventry{Sep 2024 -- Mar 2025}{Senior Java Developer}{Black Swan Data (contract)}{Data Aggregation}{}
+    {
+        Worked on a concept creation tool.\\[0.2em]
+        \small\textbf{Stack:} Java, Spring Boot, AWS S3, AWS Bedrock, Kafka, PostgreSQL, Redis, GraphQL
+    \vspace{5pt}
+        \begin{itemize}[nosep, leftmargin=1.5em]
+    \item Engineered custom Spring Boot starters for Jaeger Spring Web, streamlining application development process
+    \item Conducted architectural research on Apollo GraphQL migration to WunderGraph, producing detailed implementation roadmaps and configuration specifications
+    \item Redesigned testing infrastructure to integrate LocalStack and WireMock, creating realistic mock environments that improved test reliability and coverage
+        \end{itemize}
+    }
+
+% --- JOB 3 ---
+    \cventry{Aug 2022 -- Aug 2024}{Java Developer}{OpenTag}{Casino}{}
+    {
+        Worked on casino integrations with different casino providers like IPM, Pragmatic etc.\\[0.2em]
+    \small\textbf{Stack:} Java, Spring Boot, GCP, gRPC, Kafka, PostgreSQL, Redis, Gradle
+    \vspace{5pt}
+        \begin{itemize}[nosep, leftmargin=1.5em]
+    \item Architected and implemented gRPC services, replacing Apache Thrift endpoints for improved performance
+    \item Developed and maintained RESTful APIs for casino game provider integrations
+    \item Enhanced system reliability through proactive error monitoring and code refactoring initiatives
+        \end{itemize}
+    }
+
+% --- JOB 4 ---
+    \cventry{Nov 2021 -- Aug 2022}{Full Stack Java Developer}{VMware (contract)}{Virtualization}{}
+    {
+        Worked on on VM migration tool and the solution builder.\\[0.2em]
+        \small\textbf{Stack:} Java, Spring Boot, TypeScript, Angular, PostgreSQL, Redis, Mongo, REST, Maven
+    \vspace{5pt}
+        \begin{itemize}[nosep, leftmargin=1.5em]
+    \item Implemented OAuth 2.0 and JWT authentication flows, strengthening application security architecture
+    \item Delivered frontend enhancements using Angular, improving user workflow efficiency and satisfaction
+    \item Performed merge request reviews for backend Java and Angular, ensuring code alignment with team standards and architectural patterns
+        \end{itemize}
+    }
+
+% --- JOB 5 ---
+    \cventry{Jun 2020 -- Oct 2021}{Junnior Full Stack Java Developer}{VIVACOM}{Telecom}{}
+    {
+        Worked directly on the site vivacom.bg.\\[0.2em]
+        \small\textbf{Stack:} Java, Spring Boot, TypeScript, Angular, Oracle DB, Redis, REST, SOAP, Maven
+    \vspace{5pt}
+        \begin{itemize}[nosep, leftmargin=1.5em]
+    \item Developed and enhanced telecom backoffice UI with Angular and Typescript
+    \item Engineered RESTful APIs for the frontend server and integrated it with other internal microservices
+        \end{itemize}
+    }
+
+    % --- NEW SECTIONS FROM IMAGE ---
+
+    \section{Skills}
+    \cvitem{Backend}{Java 17 and 21, Spring ecosystem (Boot, Security, Data, Cloud, Web Services), Hibernate, JPA}
+    \cvitem{Infrastructure}{Docker containers, Kubernetes (k8s), AWS, CI/CD Pipelines}
+    \cvitem{API Tech}{RESTful services, gRPC, Kafka, GraphQL, SOAP, JMS}
+    \cvitem{Databases}{PostgreSQL, Oracle, Redis, MongoDB, JDBC, SQL}
+    \cvitem{Testing}{JUnit, AssertJ, Mockito, Cucumber, BDD methodologies, REST Assured}
+    \cvitem{FrontEnd}{JavaScript, TypeScript, Angular, CSS, HTML}
+
+    \section{Education}
+    \cventry{2011--2016}{Bachelor's Degree in Mechanical Engineering}{Technical University Sofia}{Sofia}{}{}
+
+\end{document}
