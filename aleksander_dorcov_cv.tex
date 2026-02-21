@@ -1,8 +1,7 @@
 \documentclass[11pt,a4paper,sans]{moderncv}
 
-% --- GEOMETRY ---
-% Significantly reduced margins to 1.5cm on all sides for a cleaner, wider look
-\usepackage[scale=0.85, top=0.5cm, bottom=1cm, left=0.5cm, right=0.5cm]{geometry}
+% What controls the padding on the page
+\usepackage[scale=0.85, top=1cm, bottom=1cm, left=1cm, right=1cm]{geometry}
 
 % --- PACKAGES ---
 \usepackage{enumitem} % Used to control list spacing precisely
@@ -17,6 +16,7 @@
 \address{Sofia, Bulgaria}{}
 \phone[mobile]{+359 877933794}
 \email{aleksander.dorcov@gmail.com}
+\photo[64pt][0.4pt]{profile_picture} % Replace 'profile_picture' with your filename
 
 \begin{document}
     \makecvtitle
@@ -87,7 +87,7 @@
         \end{itemize}
     }
 
-    % --- NEW SECTIONS FROM IMAGE ---
+% --- Skills ---
 
     \section {\textbf{Skills}}
     \cvitem{Backend:}{Java 17 and 21, Spring ecosystem (Boot, Security, Data, Cloud, Web Services), Hibernate, JPA}
@@ -97,6 +97,7 @@
     \cvitem{Testing:}{JUnit, AssertJ, Mockito, Cucumber, BDD methodologies, REST Assured}
     \cvitem{FrontEnd:}{JavaScript, TypeScript, Angular, CSS, HTML}
 
+% --- Education ---
     \section {\textbf{Education}}
     \cventry{2011--2016}{Bachelor's Degree in Mechanical Engineering}{Technical University Sofia}{Sofia}{}{}
 
