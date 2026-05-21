@@ -23,14 +23,13 @@ import static org.jooq.impl.DSL.selectFrom;
 @RequiredArgsConstructor
 public class DataRunner implements CommandLineRunner {
 
+
     private final DSLContext dslContext;
 
     @Override
     public void run(String @NonNull ... args) {
-        secondWay();
-        insertExample();
-        deleteExample();
     }
+
 
     private void insertExample() {
         var newUser = new Users().setUsername("jooq_fan");
